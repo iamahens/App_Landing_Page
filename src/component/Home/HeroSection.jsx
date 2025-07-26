@@ -14,6 +14,8 @@ import FeatureCard from './FeatureCard';
 import Carousel from './Carousel';
 import TabSection from './TabSection'
 import ProjectShowcaseCarousel from './ProjectShowcaseCarousel'
+import AboutSection from './AboutSection';
+import ExploreMoreSection from './ExploreMoreSection';
 
 // For this demo, we'll create a simplified version that mimics Swiper's behavior
 function HeroSection() {
@@ -462,10 +464,12 @@ Build Your First Mobile App <br class="hidden lg:inline" /> With US
           </div>
         </main>
       </div>
+      <AboutSection />
  
         <TabSection />
             <FeatureCard />
                <ProjectShowcaseCarousel />
+              <ExploreMoreSection />
     </>
   );
 }

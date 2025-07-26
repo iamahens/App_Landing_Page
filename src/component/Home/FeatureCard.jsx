@@ -4,7 +4,7 @@ import React from 'react';
 // A small, reusable component to render a single full-row card.
 const SingleCard = ({ title, heading, description, buttonText, buttonLink, visual, listItems, reverseLayout }) => {
     return (
-        <div className="bg-white rounded-lg shadow-xl overflow-hidden p-6 md:p-12 mb-8 mx-auto w-full max-w-7xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
+        <div className="bg-white rounded-lg shadow-xl overflow-hidden mt-8 p-6 md:p-12 mb-8 mx-auto w-full max-w-7xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
             <div
                 className={`flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 ${reverseLayout ? 'md:flex-row-reverse' : ''}`}
             >
