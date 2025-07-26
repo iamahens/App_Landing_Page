@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from '../component/Home/Herosection'
+import HeroSection from '../component/Home/HeroSection'
 
 
 
