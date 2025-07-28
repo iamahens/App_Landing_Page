@@ -69,21 +69,16 @@ const AboutSection = () => {
         <div className="md:grid md:grid-cols-2 md:gap-16 items-center">
           <div className="mb-8 md:mb-0">
             <h2 className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">
-              Know This First
+About Us
             </h2>
             <h3 className="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-              Some of the best features
+            We Built for Every Industry
             </h3>
             <div className="border-b-4 border-blue-500 w-12 mb-6"></div>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-              sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-              voluptatem.
+                At Hikups, we provide seamless solutions for businesses across all industries. Whether you're running a tech startup, an ecommerce store, or a SaaS platform, our team ensures your digital product runs smooth—without the hiccups. From healthtech to fintech, edtech to logistics—We make it easy for you.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-              nisi ut aliquid ex ea commodi consequatur.
-            </p>
+            
           </div>
           <div className="relative">
             <img

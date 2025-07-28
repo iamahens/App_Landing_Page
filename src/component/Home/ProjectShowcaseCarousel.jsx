@@ -20,7 +20,7 @@ function ProjectShowcaseCarousel() {
             id: 1,
             title: 'Finance Tracker App',
             description: 'An intuitive mobile app for personal finance management, budgeting, and expense tracking. Key features include data visualization and secure cloud sync.',
-            image: 'https://placehold.co/400x800/A0E7E5/000000?text=Finance+App',
+            image: '/images/Finance.jpg',
             link: '#project1',
             buttonText: 'View Case Study',
         },
@@ -28,7 +28,7 @@ function ProjectShowcaseCarousel() {
             id: 2,
             title: 'Fitness & Workout Planner',
             description: 'A personalized workout routine and progress tracker. The app features AI-driven recommendations and an easy-to-use interface for a healthier lifestyle.',
-            image: 'https://placehold.co/400x800/F0B27A/000000?text=Fitness+App',
+            image: '/images/fitness.png',
             link: '#project2',
             buttonText: 'See it in Action',
         },
@@ -36,7 +36,7 @@ function ProjectShowcaseCarousel() {
             id: 3,
             title: 'Recipe & Cooking Assistant',
             description: 'An assistant app for food lovers, helping them discover new recipes, create smart shopping lists, and follow step-by-step cooking instructions with a hands-free mode.',
-            image: 'https://images.unsplash.com/photo-1581093556272-3580459a933f?q=80&w=2670&auto=format&fit=crop',
+            image: '/images/recipe.png',
             link: '#project3',
             buttonText: 'Explore Features',
         },
@@ -44,7 +44,7 @@ function ProjectShowcaseCarousel() {
             id: 4,
             title: 'Smart Home Control',
             description: 'A sleek and unified interface to manage all your smart home devices. Control lighting, temperature, and security systems from a single, beautiful app.',
-            image: 'https://images.unsplash.com/photo-1588872657578-7efd1f155551?q=80&w=2670&auto=format&fit=crop',
+            image: '/images/Smart-home.png',
             link: '#project4',
             buttonText: 'Learn More',
         },
@@ -53,7 +53,7 @@ function ProjectShowcaseCarousel() {
             id: 5,
             title: 'Visa App',
             description: 'A sleek and unified interface to manage all your smart home devices. Control lighting, temperature, and security systems from a single, beautiful app.',
-            image: 'https://images.unsplash.com/photo-1588872657578-7efd1f155551?q=80&w=2670&auto=format&fit=crop',
+            image: '/images/visa.png',
             link: '#project5',
             buttonText: 'Learn More',
         },
@@ -97,7 +97,7 @@ function ProjectShowcaseCarousel() {
                                     <div className="block md:hidden w-full h-full p-6">
                                         <div className="flex flex-col items-center justify-center h-full space-y-6">
                                             {/* Phone Mockup */}
-                                            <div className="relative w-40 h-80 bg-gray-100 rounded-3xl p-1.5 shadow-xl">
+                                            <div className="relative w-40 h-80 ">
                                                 <div className="relative w-full h-full rounded-[20px] overflow-hidden">
                                                     <img
                                                         src={project.image}
@@ -109,7 +109,7 @@ function ProjectShowcaseCarousel() {
                                                         }}
                                                     />
                                                 </div>
-                                                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-2 bg-gray-800 rounded-full"></div>
+                                                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-2 "></div>
                                             </div>
                                             
                                             {/* Content */}
@@ -135,7 +135,7 @@ function ProjectShowcaseCarousel() {
                                         <div className="flex items-center justify-center h-full px-16 py-12">
                                             {/* Phone Mockup */}
                                             <div className="w-1/2 flex justify-center">
-                                                <div className="relative w-56 h-[450px] bg-gray-100 rounded-[2.5rem] p-2 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                                                <div className="relative w-56 h-[450px] ">
                                                     <div className="relative w-full h-full rounded-[2rem] overflow-hidden">
                                                         <img
                                                             src={project.image}
@@ -147,7 +147,7 @@ function ProjectShowcaseCarousel() {
                                                             }}
                                                         />
                                                     </div>
-                                                    <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-800 rounded-full"></div>
+                                                    <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 "></div>
                                                 </div>
                                             </div>
                                             

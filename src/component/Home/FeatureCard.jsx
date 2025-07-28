@@ -1,4 +1,3 @@
-// src/components/FeatureCard.jsx
 import React from 'react';
 
 // A small, reusable component to render a single full-row card.
@@ -48,9 +47,11 @@ const SingleCard = ({ title, heading, description, buttonText, buttonLink, visua
                     )}
                 </div>
                 
-                {/* Visual Element (Image/SVG) with hover effect */}
+                {/* Visual Element (Image/SVG) */}
                 <div className="flex-1 max-w-xl md:max-w-2xl w-full">
-                    <div className="relative w-full h-[400px] bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105">
+                    {/* --- CHANGE IS HERE --- */}
+                    {/* Removed shadow, bg, rounded, and hover effects from this container */}
+                    <div className="relative w-full h-[400px]">
                         {visual}
                     </div>
                 </div>
@@ -61,50 +62,61 @@ const SingleCard = ({ title, heading, description, buttonText, buttonLink, visua
 };
 
 // This is the main component that you will import.
-// It defines the data and renders all 5 cards in the requested alternating pattern.
 const FeatureCard = () => {
 
     const cardsData = [
         {
             id: 1,
-            title: "Developer Experience",
+            title: "Your Vision, Built with Precision",
             heading: "Transform your workflow",
-            description: "Take control of your codebase with automated testing, developer tooling, and everything else you need to build production-quality apps.",
+            description: "At Hikups, we combine cutting-edge technology with a transparent, agile process to bring your app concept to life. We believe in collaboration, keeping you involved at every stage from initial design to final deployment, ensuring the end result is a perfect match for your business goals.",
             listItems: [
-                "Hot Reload for instant UI updates",
-                "Extensive debugging tools built-in",
-                "Rich set of pre-built UI widgets",
-                "Automated testing frameworks (unit, widget, integration)"
+                "Rapid Prototyping & Feedback",
+                "Stunning, Custom Interfaces",
+                "Rock-Solid Stability",
+                "Guaranteed Quality Assurance"
             ],
+            // --- CHANGE IS HERE ---
+            // Simplified the visual prop to be just the video element.
             visual: (
-                <div className="relative w-full h-[400px] bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1627398242477-c9991d74a004?q=80&w=2670&auto=format&fit=crop" alt="Developer tools screenshot" className="absolute inset-0 w-full h-full object-cover" onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x400?text=Image+1'; }} />
-                </div>
+                <video
+                    src="/images/vdo5.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover rounded-lg" // Kept rounded corners on the video itself
+                />
             ),
-            buttonText: "Flutter for developers",
+            buttonText: "Start Your Project",
             buttonLink: "#developers"
         },
         {
             id: 2,
-            title: "Stable & Reliable",
-            heading: "Trusted by many",
-            description: "Flutter is supported and used by Google, trusted by well-known brands around the world, and maintained by a community of global developers.",
+            title: "PROVEN & RELIABLE",
+            heading: "Building Apps That Users Love",
+            description: "We are more than just developers; we are your strategic partners in growth. Hikups is trusted by innovative startups and established enterprises to deliver high-performance, secure, and scalable mobile solutions that achieve tangible business results and earn top ratings from users.",
             listItems: [
-                "Native compilation for fast app startup",
-                "Optimized rendering engine for smooth animations",
-                "Consistent UI/UX across iOS and Android",
-                "Memory efficiency for resource-constrained devices"
+                "Blazing-Fast Performance",
+                "Engaging User Experiences",
+                "Perfect on Every Device",
+                "Future-Proof & Scalable Architecture"
             ],
+            // --- CHANGE IS HERE ---
+            // Simplified the visual prop to be just the video element.
             visual: (
-                <div className="relative w-full h-[400px] bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1549692520-acc6669f6e0b?q=80&w=2787&auto=format&fit=crop" alt="Team working together" className="absolute inset-0 w-full h-full object-cover" onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x400?text=Image+2'; }} />
-                </div>
+                <video
+                    src="/images/vdo4.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover rounded-lg"
+                />
             ),
-            buttonText: "Join the Community",
+            buttonText: "Start Your Project",
             buttonLink: "#community"
         },
-        
-      
     ];
 
     return (
@@ -120,7 +132,7 @@ const FeatureCard = () => {
                         buttonLink={card.buttonLink}
                         visual={card.visual}
                         listItems={card.listItems}
-                        reverseLayout={index % 2 !== 0} // This is the logic for alternating
+                        reverseLayout={index % 2 !== 0}
                     />
                 ))}
             </div>

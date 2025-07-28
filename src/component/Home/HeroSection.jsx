@@ -21,15 +21,15 @@ import ExploreMoreSection from './ExploreMoreSection';
 function HeroSection() {
   // Placeholder images for the mobile app screens
   const mobileScreens = [
-    { id: 1, src: 'https://placehold.co/250x500/A0E7E5/000000?text=App+Screen+1', alt: 'App Screen 1' },
-    { id: 2, src: 'https://placehold.co/250x500/F0B27A/000000?text=App+Screen+2', alt: 'App Screen 2' },
-    { id: 3, src: 'https://placehold.co/250x500/C8A2C8/000000?text=App+Screen+3', alt: 'App Screen 3' },
-    { id: 4, src: 'https://placehold.co/250x500/E0BBE4/000000?text=App+Screen+4', alt: 'App Screen 4' },
-    { id: 5, src: 'https://placehold.co/250x500/957DAD/000000?text=App+Screen+5', alt: 'App Screen 5' },
-    { id: 6, src: 'https://placehold.co/250x500/B0E0E6/000000?text=App+Screen+6', alt: 'App Screen 6' },
-    { id: 7, src: 'https://placehold.co/250x500/FFDAB9/000000?text=App+Screen+7', alt: 'App Screen 7' },
-    { id: 8, src: 'https://placehold.co/250x500/957DAD/000000?text=App+Screen +8', alt: 'App Screen 8' },
-    { id: 9, src: 'https://placehold.co/250x500/B0E0E6/000000?text=App+Screen +9', alt: 'App Screen 9' },
+    { id: 1, src: '/images/slider-eight.webp', alt: 'App Screen 1' },
+    { id: 2, src: '/images/slider-four.webp', alt: 'App Screen 2' },
+    { id: 3, src: '/images/slider-one.webp', alt: 'App Screen 3' },
+    { id: 4, src: '/images/slider-six.webp', alt: 'App Screen 4' },
+    { id: 5, src: '/images/slider-seven.webp', alt: 'App Screen 5' },
+    { id: 6, src: '/images/slider-three.webp', alt: 'App Screen 6' },
+    { id: 7, src: '/images/slider-nine.webp', alt: 'App Screen 5' },
+
+
   ];
 
   // Simplified carousel state for demo
