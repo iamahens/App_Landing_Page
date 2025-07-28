@@ -138,8 +138,8 @@ const FeatureCard = () => {
     }, [activeTab]);
 
     return (
-        <section className="py-16 px-4 mb-5 ">
-            <div className="max-w-7xl mx-auto text-center">
+        <section className="py-16 px-4 mb-3">
+            <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-12">
                     Experience the power of our platform
                 </h2>

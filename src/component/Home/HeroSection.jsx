@@ -16,6 +16,7 @@ import TabSection from './TabSection'
 import ProjectShowcaseCarousel from './ProjectShowcaseCarousel'
 import AboutSection from './AboutSection';
 import ExploreMoreSection from './ExploreMoreSection';
+import Footer from './Footer';
 
 // For this demo, we'll create a simplified version that mimics Swiper's behavior
 function HeroSection() {
@@ -292,7 +293,7 @@ function HeroSection() {
                 fill="currentColor"
               />
             </svg>
-            <span className="text-lg font-bold text-gray-800">FUTURE DESKS</span>
+            <span className="text-lg font-bold text-gray-800">  HIKUPS</span>
           </div>
         </header>
 
@@ -470,6 +471,7 @@ Build Your First Mobile App <br class="hidden lg:inline" /> With US
             <FeatureCard />
                <ProjectShowcaseCarousel />
               <ExploreMoreSection />
+              <Footer/>
     </>
   );
 }
