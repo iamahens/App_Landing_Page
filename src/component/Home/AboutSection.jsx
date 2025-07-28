@@ -6,7 +6,7 @@ const AnimatedCounter = ({ start = 0, end, duration = 2000 }) => {
 
     useEffect(() => {
         let observer;
-        let interval;
+        let animationFrameId;
 
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
@@ -20,7 +20,6 @@ const AnimatedCounter = ({ start = 0, end, duration = 2000 }) => {
 
                         if (nextCount >= end) {
                             nextCount = end;
-                            clearInterval(interval);
                         }
 
                         if (Number.isInteger(end)) {
@@ -30,11 +29,10 @@ const AnimatedCounter = ({ start = 0, end, duration = 2000 }) => {
                         }
                         
                         if (nextCount < end) {
-                            requestAnimationFrame(animate);
+                            animationFrameId = requestAnimationFrame(animate);
                         }
                     };
-
-                    requestAnimationFrame(animate);
+                    animationFrameId = requestAnimationFrame(animate);
                 }
             });
         };
@@ -48,31 +46,46 @@ const AnimatedCounter = ({ start = 0, end, duration = 2000 }) => {
             if (observer) {
                 observer.disconnect();
             }
-            if (interval) {
-                clearInterval(interval);
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
             }
         };
     }, [end, start, duration]);
 
+    // Format large numbers with commas
+    const formatNumber = (num) => {
+        if (num >= 1000) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        return num;
+    };
+
     return (
         <span ref={counterRef} className="text-2xl font-bold text-gray-900">
-            {count}
-            {Number.isInteger(end) ? '' : '+'}
+            {formatNumber(count)}
+            {/* The '+' is now handled by the formatNumber logic for integers */}
         </span>
     );
 };
 
+
 const AboutSection = () => {
   return (
+    // The outer section is now simpler
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 xl:px-0">
+      {/* --- CHANGE IS HERE ---
+        Using a max-width container with mx-auto creates the left/right margins on larger screens.
+        The px-* classes inside this container handle padding on smaller screens.
+        This is a standard and robust way to create centered, spaced content.
+      */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="md:grid md:grid-cols-2 md:gap-16 items-center">
           <div className="mb-8 md:mb-0">
             <h2 className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">
-About Us
+              About Us
             </h2>
             <h3 className="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-            We Built for Every Industry
+              We Build for Every Industry
             </h3>
             <div className="border-b-4 border-blue-500 w-12 mb-6"></div>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
