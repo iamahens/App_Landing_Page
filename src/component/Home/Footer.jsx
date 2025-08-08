@@ -60,7 +60,7 @@ const Footer = () => {
                 </a>
                 {/* Instagram Button */}
                 <a 
-                    href="https://instagram.com/your-profile" 
+                    href="https://www.instagram.com/hikups_?utm_source=qr&igsh=MXBlYjgwZ2U1aXpyZA==" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-flex items-center justify-center w-full sm:w-auto space-x-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity transform hover:scale-105"

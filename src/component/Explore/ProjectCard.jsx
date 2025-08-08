@@ -3,6 +3,7 @@ import React from 'react';
 
 const ProjectCard = ({ image, title, description }) => {
   return (
+    
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
       {/* Card Image */}
       {/* Increased height from h-48 sm:h-56 to h-64 sm:h-72 */}

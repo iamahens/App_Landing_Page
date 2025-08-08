@@ -112,6 +112,7 @@ const ProjectCardGrid = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 

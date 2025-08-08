@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-color: #0070f3;
+  --text-color-dark: #111827;
+  --text-color-medium: #6b7280;
+  --bg-color: #ffffff;
+  --surface-color: #f9fafb;
+  --border-color: #eaeaea;
+  --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -2px rgb(0 0 0 / 0.04);
+}
+
+/* --- Page and Heading Styles --- */
+body {
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-heading {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--text-color-dark);
+  text-align: center;
+  margin-bottom: 24px;
+  animation: slideDownFade 1s ease-out;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-section-container {
+  background-color: var(--bg-color);
+  padding: 24px 40px 40px 40px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid white;
+}
+
+/* --- Animated Tab Header --- */
+.tab-header {
+  position: relative;
+  display: flex;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 32px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 16px 0;
+  margin: 0 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color-medium);
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:first-child { margin-left: 0; }
+.tab-btn:last-child { margin-right: 0; }
+
+.tab-btn.tab-active {
+  color: var(--text-color-dark);
+  font-weight: 600;
+}
+
+.tab-glider {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* --- Staggered Content Animation --- */
+.content-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color-dark);
+  margin-bottom: 24px;
+}
+
+.content-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 24px;
+}
+
+.content-item {
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  
+  /* Initial state for animation */
+  opacity: 0;
+  transform: translateY(20px);
+  /* Animation definition */
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Staggered Delay --- */
+.content-item:nth-child(1) { animation-delay: 0.1s; }
+.content-item:nth-child(2) { animation-delay: 0.2s; }
+.content-item:nth-child(3) { animation-delay: 0.3s; }
+.content-item:nth-child(4) { animation-delay: 0.4s; }
+/* Add more if you have more items */
+.content-item:nth-child(5) { animation-delay: 0.5s; }
+.content-item:nth-child(6) { animation-delay: 0.6s; }
+
+
+.content-item:hover {
+  transform: translateY(-8px) !important; /* Use !important to override animation transform */
+  border-color: var(--primary-color);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+}
+
+.logo-container {
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content-item:hover .logo-container {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.tech-logo {
+  height: 60px;
+  width: 60px;
+}
+
+.item-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color-dark);
+}
