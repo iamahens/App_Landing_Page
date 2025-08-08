@@ -61,7 +61,7 @@ const Tabs = () => {
   }, [activeTab, tabIds]);
 
   return (
-    <div className="page-container">
+    <div className="page-container mt-20">
       <h1 className="main-heading">Explore The Tech Stack</h1>
       <div className="tab-section-container">
         <div role="tablist" aria-label="Technology Categories" className="tab-header">

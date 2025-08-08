@@ -60,6 +60,9 @@ body {
   display: flex;
   border-bottom: 2px solid var(--border-color);
   margin-bottom: 32px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
 }
 
 .tab-btn {
@@ -72,7 +75,6 @@ body {
   font-weight: 500;
   color: var(--text-color-medium);
   transition: color 0.3s ease;
-  white-space: nowrap;
 }
 
 .tab-btn:first-child { margin-left: 0; }
@@ -165,4 +167,68 @@ body {
   font-size: 16px;
   font-weight: 500;
   color: var(--text-color-dark);
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 32px;
+  }
+  
+  .tab-section-container {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .tab-btn {
+    padding: 12px 0;
+    margin: 0 16px;
+    font-size: 14px;
+  }
+  
+  .content-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin-top: 50px;
+  }
+
+  .tab-section-container {
+    padding: 15px;
+    margin: 5px;
+  }
+  
+  .tab-header {
+    justify-content: center;
+  }
+
+  .tab-btn {
+    padding: 10px 0;
+    margin: 0 12px;
+    font-size: 13px;
+  }
+  
+  .content-items {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 16px;
+  }
+
+  .content-item {
+    padding: 16px;
+    gap: 10px;
+  }
+  
+  .tech-logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .item-name {
+    font-size: 14px;
+  }
 }
